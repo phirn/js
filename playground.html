@@ -8,10 +8,34 @@
       body { width: 960px; margin: 20px auto;}
     </style>
   </head>
+    <script>
+      // Show an alert box before the body of the page is shown.
+      // Then, try the challenges.
+      // alert("Wazzzzzup!");
+
+      $(document).ready(function() {
+        $("h1").on("click", function() {
+          $("ul").fadeToggle();
+        });
+      });
+
+      // var h1 = document.getElementsByTagName("h1")[0];
+      // h1.onclick = function() {
+      //   var ul = document.getElementsByTagName("ul")[0];
+      //   if (ul.style.display != "none") {
+      //     ul.style.display = "none";
+      //   } else {
+      //     ul.style.display = "block";
+      //   }
+      // }
+    </script>
+
 
   <body>
 
     <h1>jQuery Challenges</h1>
+    <h1>Another</h1>
+
 
 
     <ul>
@@ -21,17 +45,6 @@
     </ul>
 
     <a href="http://www.apple.com">Clicking this paragraph should display an alert and prevent the browser from navigating away from this page.</a>
-
-    <script>
-      // Show an alert box before the body of the page is shown.
-      // Then, try the challenges.
-      // alert("Wazzzzzup!");
-      var h1 = document.getElementsByTagName("h1")[0];
-      h1.onclick = function() {
-        ul = document.getElementsByTagName("ul")[0];
-        ul.style.display = "none";
-      }
-    </script>
 
 
   <script>
