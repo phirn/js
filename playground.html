@@ -15,8 +15,22 @@
 
       $(document).ready(function() {
         $("h1").on("click", function() {
-          $("ul").fadeToggle();
+          $("ul").slideToggle();
         });
+
+        $("li").on("click", function(e) {
+          // $(e.target).css("color", "red");
+          e.target.style.color = "red";
+        });
+
+        $("#add_item").on("click", function() {
+          $("ul").append("<li>Hello!</li>");
+        })
+
+        $("a").on("click", function(e) {
+          e.preventDefault();
+          alert("Nice try!");
+        })
       });
 
       // var h1 = document.getElementsByTagName("h1")[0];
@@ -34,17 +48,15 @@
   <body>
 
     <h1>jQuery Challenges</h1>
-    <h1>Another</h1>
-
-
 
     <ul>
       <li>Clicking the heading above should make this entire list appear and disappear.</li>
       <li>Clicking any of these list items should turn that list item red.</li>
       <li id="add_item">Clicking this item in particular should add a new item to the list.</li>
+      <li>Clicking any item should remove that item from the list.</li>
     </ul>
 
-    <a href="http://www.apple.com">Clicking this paragraph should display an alert and prevent the browser from navigating away from this page.</a>
+    <a href="#">Clicking this paragraph should display an alert and prevent the browser from navigating away from this page.</a>
 
 
   <script>
