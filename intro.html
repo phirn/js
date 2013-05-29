@@ -1,13 +1,22 @@
 <script>
-  function sayWeather() {
+  function sayWeatherToday() {
     var temp = "72 degrees";
     alert("It is " + temp);
   };
 
-  function sayWeather(temp) {
+  function sayWeather(f) {
+    var temp = f("Celsius");
     alert("It is " + temp);
   };
 
+  function takeTemperature(unit) {
+    return "60 degrees " + unit;
+  }
   // Write some javascript that will call each of these functions.
+
+  // sayWeatherToday();
+  sayWeather(takeTemperature);
+
+
 
 </script>
